@@ -1,3 +1,5 @@
+using System;
+
 public static class ArraySelector
 {
     public static void Run()
@@ -11,6 +13,15 @@ public static class ArraySelector
 
     private static int[] ListSelector(int[] list1, int[] list2, int[] select)
     {
-        return [];
+        int i1 = 0, i2 = 0;
+        var result = new int[select.Length];
+        for (int i = 0; i < select.Length; i++)
+        {
+            if (select[i] == 1)
+                result[i] = list1[i1++];
+            else
+                result[i] = list2[i2++];
+        }
+        return result;
     }
 }
