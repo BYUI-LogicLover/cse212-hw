@@ -1,13 +1,9 @@
-public class Person
-{
-    public readonly string Name;
-    public int Turns { get; set; }
+namespace code;
 
-    internal Person(string name, int turns)
-    {
-        Name = name;
-        Turns = turns;
-    }
+public class Person(string name, int turns)
+{
+    public string Name { get; } = name;
+    public int Turns { get; init; } = turns;
 
     public override string ToString()
     {

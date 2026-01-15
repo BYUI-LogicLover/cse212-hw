@@ -4,6 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 // DO NOT MODIFY THE CODE IN THE TESTS in this file, just the comments above the tests. 
 // Fix the code being tested to match requirements and make all tests pass. 
 
+namespace code;
+
 [TestClass]
 public class TakingTurnsQueueTests
 {
@@ -164,8 +166,8 @@ public class TakingTurnsQueueTests
         catch (Exception e)
         {
             Assert.Fail(
-                 string.Format("Unexpected exception of type {0} caught: {1}",
-                                e.GetType(), e.Message)
+                string.Format("Unexpected exception of type {0} caught: {1}",
+                    e.GetType(), e.Message)
             );
         }
     }
