@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+namespace learn;
+
 public class SimpleQueue {
     public static void Run() {
         // Test Cases
