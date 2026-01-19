@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public static class Arrays
 {
     /// <summary>
@@ -8,12 +10,18 @@ public static class Arrays
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
     public static double[] MultiplesOf(double number, int length)
     {
-        // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Step 1: Create an array of doubles with the size of 'length'
+        double[] multiples = new double[length];
 
-        return []; // replace this return statement with your own
+        // Step 2: Use a loop to iterate from 0 to length - 1
+        for (int i = 0; i < length; i++)
+        {
+            // Step 3: In each iteration, calculate the multiple by multiplying 'number' with (i + 1)
+            multiples[i] = number * (i + 1);
+        }
+
+        // Step 4: After the loop, return the populated array
+        return multiples;
     }
 
     /// <summary>
@@ -25,9 +33,22 @@ public static class Arrays
     /// </summary>
     public static void RotateListRight(List<int> data, int amount)
     {
-        // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Step 1: Calculate the effective rotation amount
+        int n = data.Count - amount;
+
+        // Step 2: Extract the last 'amount' elements
+        List<int> tail = data.GetRange(n, amount);
+
+        // Step 3: Remove the last 'amount' elements from the original list
+        List<int> head = data.GetRange(0, n);
+
+        // Step 4: Clear the original list and add the tail followed by the head
+        data.Clear();
+
+        // Step 5: Add the extracted tail elements to the front
+        data.AddRange(tail);
+
+        // Step 6: Add the remaining head elements to the end
+        data.AddRange(head);
     }
 }

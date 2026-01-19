@@ -1,4 +1,9 @@
-﻿public class SimpleQueue {
+﻿using System;
+using System.Collections.Generic;
+
+namespace learn;
+
+public class SimpleQueue {
     public static void Run() {
         // Test Cases
 
@@ -66,8 +71,8 @@
         if (_queue.Count <= 0)
             throw new IndexOutOfRangeException();
 
-        var value = _queue[1];
-        _queue.RemoveAt(1);
+        var value = _queue[_queue.Count - 1];
+        _queue.RemoveAt(_queue.Count - 1);
         return value;
     }
 }

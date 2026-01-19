@@ -1,4 +1,9 @@
-﻿public class SimpleQueueSolution {
+﻿using System;
+using System.Collections.Generic;
+
+namespace learn;
+
+public class SimpleQueueSolution {
     public static void Run() {
         // Test Cases
 
